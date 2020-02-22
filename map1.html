@@ -15,7 +15,7 @@
 
 window.onload = function() {
 	var map = initMap('mapid')
-	map.setZoom(30)
+	map.setZoom(5)
 	map.addIcon(26.181479, 127.679989, "糸数家","icon/building.png", 30)
 	map.addIcon(35.362867, 138.730942, "富士山","icon/nenga_mark07_fujisan.png", 70, 58)
 	map.panTo([ 26.181479, 127.679989 ]) // 糸数家
@@ -30,7 +30,7 @@ window.onload = function() {
 		select ?uri ?name ?lat ?lng {
 			?uri ic:名称 [ ic:表記 ?name ].
 			?uri ic:地理座標 [ ic:緯度 ?lat; ic:経度 ?lng; ].
-			filter(contains(str(?name),'沖縄'))
+			filter(contains(str(?name),'日本'))
 		} limit 100
 	`
 
